@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		19B0AB742D416A50003C4142 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B0AB562D416A4F003C4142 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B0AB5D2D416A4F003C4142;
+			remoteInfo = "zad 4 siec";
+		};
+		19B0AB7E2D416A50003C4142 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B0AB562D416A4F003C4142 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B0AB5D2D416A4F003C4142;
+			remoteInfo = "zad 4 siec";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19B0AB5E2D416A4F003C4142 /* zad 4 siec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zad 4 siec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B0AB732D416A50003C4142 /* zad 4 siecTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zad 4 siecTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B0AB7D2D416A50003C4142 /* zad 4 siecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zad 4 siecUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		19B0AB602D416A4F003C4142 /* zad 4 siec */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "zad 4 siec";
+			sourceTree = "<group>";
+		};
+		19B0AB762D416A50003C4142 /* zad 4 siecTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "zad 4 siecTests";
+			sourceTree = "<group>";
+		};
+		19B0AB802D416A50003C4142 /* zad 4 siecUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "zad 4 siecUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19B0AB5B2D416A4F003C4142 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B0AB702D416A50003C4142 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B0AB7A2D416A50003C4142 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19B0AB552D416A4F003C4142 = {
+			isa = PBXGroup;
+			children = (
+				19B0AB602D416A4F003C4142 /* zad 4 siec */,
+				19B0AB762D416A50003C4142 /* zad 4 siecTests */,
+				19B0AB802D416A50003C4142 /* zad 4 siecUITests */,
+				19B0AB5F2D416A4F003C4142 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19B0AB5F2D416A4F003C4142 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B0AB5E2D416A4F003C4142 /* zad 4 siec.app */,
+				19B0AB732D416A50003C4142 /* zad 4 siecTests.xctest */,
+				19B0AB7D2D416A50003C4142 /* zad 4 siecUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19B0AB5D2D416A4F003C4142 /* zad 4 siec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B0AB872D416A50003C4142 /* Build configuration list for PBXNativeTarget "zad 4 siec" */;
+			buildPhases = (
+				19B0AB5A2D416A4F003C4142 /* Sources */,
+				19B0AB5B2D416A4F003C4142 /* Frameworks */,
+				19B0AB5C2D416A4F003C4142 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				19B0AB602D416A4F003C4142 /* zad 4 siec */,
+			);
+			name = "zad 4 siec";
+			packageProductDependencies = (
+			);
+			productName = "zad 4 siec";
+			productReference = 19B0AB5E2D416A4F003C4142 /* zad 4 siec.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19B0AB722D416A50003C4142 /* zad 4 siecTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B0AB8A2D416A50003C4142 /* Build configuration list for PBXNativeTarget "zad 4 siecTests" */;
+			buildPhases = (
+				19B0AB6F2D416A50003C4142 /* Sources */,
+				19B0AB702D416A50003C4142 /* Frameworks */,
+				19B0AB712D416A50003C4142 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19B0AB752D416A50003C4142 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				19B0AB762D416A50003C4142 /* zad 4 siecTests */,
+			);
+			name = "zad 4 siecTests";
+			packageProductDependencies = (
+			);
+			productName = "zad 4 siecTests";
+			productReference = 19B0AB732D416A50003C4142 /* zad 4 siecTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19B0AB7C2D416A50003C4142 /* zad 4 siecUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B0AB8D2D416A50003C4142 /* Build configuration list for PBXNativeTarget "zad 4 siecUITests" */;
+			buildPhases = (
+				19B0AB792D416A50003C4142 /* Sources */,
+				19B0AB7A2D416A50003C4142 /* Frameworks */,
+				19B0AB7B2D416A50003C4142 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19B0AB7F2D416A50003C4142 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				19B0AB802D416A50003C4142 /* zad 4 siecUITests */,
+			);
+			name = "zad 4 siecUITests";
+			packageProductDependencies = (
+			);
+			productName = "zad 4 siecUITests";
+			productReference = 19B0AB7D2D416A50003C4142 /* zad 4 siecUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19B0AB562D416A4F003C4142 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					19B0AB5D2D416A4F003C4142 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					19B0AB722D416A50003C4142 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 19B0AB5D2D416A4F003C4142;
+					};
+					19B0AB7C2D416A50003C4142 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 19B0AB5D2D416A4F003C4142;
+					};
+				};
+			};
+			buildConfigurationList = 19B0AB592D416A4F003C4142 /* Build configuration list for PBXProject "zad 4 siec" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19B0AB552D416A4F003C4142;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 19B0AB5F2D416A4F003C4142 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19B0AB5D2D416A4F003C4142 /* zad 4 siec */,
+				19B0AB722D416A50003C4142 /* zad 4 siecTests */,
+				19B0AB7C2D416A50003C4142 /* zad 4 siecUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19B0AB5C2D416A4F003C4142 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B0AB712D416A50003C4142 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B0AB7B2D416A50003C4142 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19B0AB5A2D416A4F003C4142 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B0AB6F2D416A50003C4142 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B0AB792D416A50003C4142 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19B0AB752D416A50003C4142 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19B0AB5D2D416A4F003C4142 /* zad 4 siec */;
+			targetProxy = 19B0AB742D416A50003C4142 /* PBXContainerItemProxy */;
+		};
+		19B0AB7F2D416A50003C4142 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19B0AB5D2D416A4F003C4142 /* zad 4 siec */;
+			targetProxy = 19B0AB7E2D416A50003C4142 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		19B0AB852D416A50003C4142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19B0AB862D416A50003C4142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19B0AB882D416A50003C4142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"zad 4 siec/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.zad-4-siec";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19B0AB892D416A50003C4142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"zad 4 siec/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.zad-4-siec";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19B0AB8B2D416A50003C4142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.zad-4-siecTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zad 4 siec.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zad 4 siec";
+			};
+			name = Debug;
+		};
+		19B0AB8C2D416A50003C4142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.zad-4-siecTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zad 4 siec.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zad 4 siec";
+			};
+			name = Release;
+		};
+		19B0AB8E2D416A50003C4142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.zad-4-siecUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "zad 4 siec";
+			};
+			name = Debug;
+		};
+		19B0AB8F2D416A50003C4142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.zad-4-siecUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "zad 4 siec";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19B0AB592D416A4F003C4142 /* Build configuration list for PBXProject "zad 4 siec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B0AB852D416A50003C4142 /* Debug */,
+				19B0AB862D416A50003C4142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B0AB872D416A50003C4142 /* Build configuration list for PBXNativeTarget "zad 4 siec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B0AB882D416A50003C4142 /* Debug */,
+				19B0AB892D416A50003C4142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B0AB8A2D416A50003C4142 /* Build configuration list for PBXNativeTarget "zad 4 siecTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B0AB8B2D416A50003C4142 /* Debug */,
+				19B0AB8C2D416A50003C4142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B0AB8D2D416A50003C4142 /* Build configuration list for PBXNativeTarget "zad 4 siecUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B0AB8E2D416A50003C4142 /* Debug */,
+				19B0AB8F2D416A50003C4142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19B0AB562D416A4F003C4142 /* Project object */;
+}

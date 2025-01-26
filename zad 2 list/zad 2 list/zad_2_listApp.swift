@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct zad_2_listApp: App {
+struct TaskApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
 }
+

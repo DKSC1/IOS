@@ -1,0 +1,10 @@
+{
+    "categories": [
+      { "id": "1", "name": "Electronics" },
+      { "id": "2", "name": "Clothing" }
+    ],
+    "products": [
+      { "id": "1", "name": "iPhone", "price": 999.99, "categoryId": "1" },
+      { "id": "2", "name": "T-shirt", "price": 19.99, "categoryId": "2" }
+    ]
+  }
