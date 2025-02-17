@@ -1,86 +1,154 @@
-//
-//  ContentView.swift
-//  zad 4 siec
-//
-//  Created by user270910 on 1/22/25.
-//
-
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+        TabView {
+            SplitCategoriesProductsView()
+                .tabItem {
+                    Label("Sklep", systemImage: "cart")
                 }
-                .onDelete(perform: deleteItems)
+            
+            NavigationView {
+                OrdersListView()
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            .tabItem {
+                Label("Zamówienia", systemImage: "tray.full")
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
+struct SplitCategoriesProductsView: View {
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Kategoria.nazwa, ascending: true)],
+        animation: .default
+    ) private var categories: FetchedResults<Kategoria>
+    
+    @State private var selectedCategory: Kategoria?
+
+    var body: some View {
+        NavigationView {
+            HStack(spacing: 0) {
+           
+                List(categories, id: \.self) { category in
+                    Button(action: {
+                        selectedCategory = category
+                    }) {
+                        HStack {
+                            Text(category.nazwa ?? "Brak nazwy")
+                                .foregroundColor(.primary)
+                            Spacer()
+                            if selectedCategory == category {
+                                Image(systemName: "chevron.right")
+                            }
+                        }
+                    }
+                    .listRowBackground(selectedCategory == category ? Color(.systemGray5) : Color.clear)
+                }
+                .frame(width: 200)
+                .navigationTitle("Kategorie")
+
+               
+                if let selectedCategory = selectedCategory {
+                    CategoryProductsView(category: selectedCategory)
+                } else {
+                    VStack {
+                        Text("Wybierz kategorię z listy po lewej")
+                            .font(.title2)
+                            .foregroundColor(.gray)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+            }
+        }
+    }
+}
+
+struct CategoryProductsView: View {
+    let category: Kategoria
+    
+    @FetchRequest private var products: FetchedResults<Produkt>
+    
+    init(category: Kategoria) {
+        self.category = category
+        _products = FetchRequest(
+            entity: Produkt.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \Produkt.nazwa, ascending: true)],
+            predicate: NSPredicate(format: "kategoria == %@", category)
+        )
+    }
+
+    var body: some View {
+        VStack {
+            List(products) { product in
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(product.nazwa ?? "Brak nazwy")
+                            .font(.headline)
+                        Text("Cena: \(product.cena?.stringValue ?? "0.00") zł")
+                            .foregroundColor(.secondary)
+                    }
+                    Spacer()
+                }
+                .padding(.vertical, 8)
+            }
+            .listStyle(PlainListStyle())
+            
+            Spacer()
+        }
+        .navigationTitle(category.nazwa ?? "Produkty")
+    }
+}
+
+
+struct OrdersListView: View {
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Zamowienie.data, ascending: false)],
+        animation: .default
+    )
+    private var orders: FetchedResults<Zamowienie>
+
+    var body: some View {
+        List(orders) { order in
+            VStack(alignment: .leading) {
+                Text("Zamówienie #\(order.id?.prefix(6) ?? "000000")")
+                    .font(.headline)
+                
+                Text("Produkty:")
+                    .font(.subheadline)
+                    .padding(.top, 4)
+                
+                ForEach(order.produkty?.allObjects as? [Produkt] ?? [], id: \.self) { produkt in
+                    Text("- \(produkt.nazwa ?? "Nieznany produkt")")
+                        .font(.caption)
+                }
+                
+                Text("Data: \(order.data ?? Date(), formatter: dateFormatter)")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+        }
+        .navigationTitle("Zamówienia")
+    }
+}
+
+let currencyFormatter: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .currency
+    formatter.currencySymbol = "zł"
+    formatter.minimumFractionDigits = 2
     return formatter
 }()
 
+let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    return formatter
+}()
+
+
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
 }

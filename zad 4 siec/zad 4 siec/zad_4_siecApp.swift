@@ -1,9 +1,4 @@
-//
-//  zad_4_siecApp.swift
-//  zad 4 siec
-//
-//  Created by user270910 on 1/22/25.
-//
+
 
 import SwiftUI
 

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="23H222" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Kategoria" representedClassName="Kategoria" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES"/>
+    <entity name="Kategoria" representedClassName="Kategoria" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="nazwa" optional="YES" attributeType="String"/>
-        <relationship name="produkty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Produkt" inverseName="kategoria" inverseEntity="Produkt"/>
+        <relationship name="produkty" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Produkt" inverseName="kategoria" inverseEntity="Produkt"/>
     </entity>
-    <entity name="Produkt" representedClassName="Produkt" syncable="YES" codeGenerationType="class">
+    <entity name="Produkt" representedClassName="Produkt" syncable="YES">
         <attribute name="cena" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="nazwa" optional="YES" attributeType="String"/>
+        <attribute name="opis" optional="YES" attributeType="String"/>
         <relationship name="kategoria" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kategoria" inverseName="produkty" inverseEntity="Kategoria"/>
+    </entity>
+    <entity name="Zamowienie" representedClassName="Zamowienie" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <relationship name="produkty" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Produkt"/>
     </entity>
 </model>

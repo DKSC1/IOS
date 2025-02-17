@@ -1,10 +1,102 @@
 {
-    "categories": [
-      { "id": "1", "name": "Electronics" },
-      { "id": "2", "name": "Clothing" }
-    ],
-    "products": [
-      { "id": "1", "name": "iPhone", "price": 999.99, "categoryId": "1" },
-      { "id": "2", "name": "T-shirt", "price": 19.99, "categoryId": "2" }
-    ]
-  }
+  "kategorie": [
+    {
+      "id": "1",
+      "nazwa": "Elektronika"
+    },
+    {
+      "id": "2",
+      "nazwa": "Moda"
+    },
+    {
+      "id": "3",
+      "nazwa": "Dom i Ogród"
+    }
+  ],
+  "produkty": [
+    {
+      "id": "101",
+      "nazwa": "Laptop Apple MacBook Pro",
+      "cena": 9999.99,
+      "kategoria_id": "1"
+    },
+    {
+      "id": "102",
+      "nazwa": "Smartfon Samsung Galaxy S24",
+      "cena": 4599.50,
+      "kategoria_id": "1"
+    },
+    {
+      "id": "103",
+      "nazwa": "Zegarek Apple Watch Series 9",
+      "cena": 2299.99,
+      "kategoria_id": "1"
+    },
+    {
+      "id": "104",
+      "nazwa": "Kurtka zimowa",
+      "cena": 399.99,
+      "kategoria_id": "2"
+    },
+    {
+      "id": "105",
+      "nazwa": "Buty sportowe Adidas",
+      "cena": 499.99,
+      "kategoria_id": "2"
+    },
+    {
+      "id": "106",
+      "nazwa": "Mikser kuchenny Bosch",
+      "cena": 349.99,
+      "kategoria_id": "3"
+    }
+  ],
+  "zamowienia": [
+    {
+      "id": "5001",
+      "data": "2025-02-17",
+      "produkty": [
+        { "id": "101", "ilosc": 1 },
+        { "id": "105", "ilosc": 2 }
+      ]
+    },
+    {
+      "id": "5002",
+      "data": "2025-02-16",
+      "produkty": [
+        { "id": "104", "ilosc": 1 },
+        { "id": "106", "ilosc": 1 }
+      ]
+    },
+    {
+      "id": "5003",
+      "data": "2025-02-15",
+      "produkty": [
+        { "id": "102", "ilosc": 1 },
+        { "id": "103", "ilosc": 1 }
+      ]
+    },
+    {
+      "id": "5004",
+      "data": "2025-02-14",
+      "produkty": [
+        { "id": "101", "ilosc": 2 }
+      ]
+    },
+    {
+      "id": "5005",
+      "data": "2025-02-13",
+      "produkty": [
+        { "id": "105", "ilosc": 1 },
+        { "id": "106", "ilosc": 1 }
+      ]
+    },
+    {
+      "id": "5006",
+      "data": "2025-02-12",
+      "produkty": [
+        { "id": "104", "ilosc": 3 }
+      ]
+    }
+  ]
+}

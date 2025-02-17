@@ -1,57 +1,110 @@
-//
-//  Persistence.swift
-//  zad 4 siec
-//
-//  Created by user270910 on 1/22/25.
-//
-
 import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
 
-    @MainActor
-    static let preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
-
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "zad_4_siec")
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        
+     
+        let description = container.persistentStoreDescriptions.first!
+        description.shouldMigrateStoreAutomatically = true
+        description.shouldInferMappingModelAutomatically = true
+        
+        if let storeURL = description.url {
+            let fileManager = FileManager.default
+            try? fileManager.removeItem(at: storeURL)
         }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
+
+        if inMemory {
+            container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
+        }
+
+        container.loadPersistentStores { _, error in
+            if let error = error as NSError? {
+                
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-        })
-        container.viewContext.automaticallyMergesChangesFromParent = true
+        }
+
+        
+        NetworkManager.shared.startDataCheckTimer(context: container.viewContext)
     }
+
+    
+    func saveCategoryAndProductsLocally(categories: [KategoriaJSON], products: [ProduktJSON], context: NSManagedObjectContext) {
+        context.perform {
+            do {
+               
+                for category in categories {
+                    if let existingCategory = self.getCategoryById(categoryId: category.id, context: context) {
+                       
+                        existingCategory.nazwa = category.nazwa
+                    } else {
+                        
+                        let categoryObject = Kategoria(context: context)
+                        categoryObject.id = category.id
+                        categoryObject.nazwa = category.nazwa
+                    }
+                }
+
+               
+                for product in products {
+                    if let existingProduct = self.getProductById(productId: product.id, context: context) {
+                       
+                        existingProduct.nazwa = product.nazwa
+                        existingProduct.cena = NSDecimalNumber(decimal: product.cena)
+                       
+                        if let category = self.getCategoryById(categoryId: product.kategoria_id, context: context) {
+                            existingProduct.kategoria = category
+                        }
+                    } else {
+                        
+                        let productObject = Produkt(context: context)
+                        productObject.id = product.id
+                        productObject.nazwa = product.nazwa
+                        productObject.cena = NSDecimalNumber(decimal: product.cena)
+
+                        
+                        if let category = self.getCategoryById(categoryId: product.kategoria_id, context: context) {
+                            productObject.kategoria = category
+                        }
+                    }
+                }
+
+                try context.save()
+            } catch {
+                print("Błąd zapisu danych lokalnych: \(error)")
+            }
+        }
+    }
+
+    private func getCategoryById(categoryId: String, context: NSManagedObjectContext) -> Kategoria? {
+        let fetchRequest: NSFetchRequest<Kategoria> = Kategoria.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", categoryId)
+        do {
+            let categories = try context.fetch(fetchRequest)
+            return categories.first
+        } catch {
+            print("Błąd pobierania kategorii: \(error)")
+            return nil
+        }
+    }
+
+    private func getProductById(productId: String, context: NSManagedObjectContext) -> Produkt? {
+        let fetchRequest: NSFetchRequest<Produkt> = Produkt.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", productId)
+        do {
+            let products = try context.fetch(fetchRequest)
+            return products.first
+        } catch {
+            print("Błąd pobierania produktu: \(error)")
+            return nil
+        }
+    }
+    
+    
 }
