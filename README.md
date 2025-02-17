@@ -45,7 +45,7 @@ pobieranie dodatkowo zamówień (minimum 5 pól, w tym jedna relacja) 🟢
 
 wyświetlanie produktów oraz ich kategorii na dwóch osobnych listach 🟢
 
-dodawanie produktów z poziomu aplikacji mobilnej 🟢
+dodawanie produktów z poziomu aplikacji mobilnej 🔴
 
 ### Zad 5 Oauth
 
