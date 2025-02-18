@@ -63,7 +63,7 @@ zapisywanie danych logowania OAuth2 po stronie serwera 🔴
 
 formularz płatności oraz mockowanie przez aplikację serwerową 🟢
 
-model płatności lokalnie 
+model płatności lokalnie 🟢
 
 lista zakupionych (opłaconych) produktów + model 🔴
 
