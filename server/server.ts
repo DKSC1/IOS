@@ -1,34 +1,27 @@
-// server.ts
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-import { Application, Context } from "https://deno.land/x/oak/mod.ts";
+const router = new Router();
 
-const app = new Application();
+router.post("/pay", async (context) => {
+  const body = await context.request.body.json();
 
-const paymentData = {
-  cardNumber: "1234567890123456", // przykładowe dane karty
-  expiryDate: "12/12",            // przykładowa data ważności
-  cvv: "123"                      // przykładowy kod CVV
-};
+  // Przykładowe dane do weryfikacji
+  const validCard = "123";
+  const validCvv = "123";
+  const validExpiry = "12/25"; // MM/YY
 
-app.use(async (ctx: Context) => {
-  if (ctx.request.method === "POST" && ctx.request.url.pathname === "/payment") {
-    try {
-      const body = await ctx.request.body().value;
-      const { cardNumber, expiryDate, cvv } = body;
-
-      if (cardNumber === paymentData.cardNumber && expiryDate === paymentData.expiryDate && cvv === paymentData.cvv) {
-        ctx.response.status = 200;
-        ctx.response.body = { message: "Płatność przeszła pomyślnie!" };
-      } else {
-        ctx.response.status = 400;
-        ctx.response.body = { message: "Niepoprawne dane płatności." };
-      }
-    } catch (e) {
-      ctx.response.status = 500;
-      ctx.response.body = { message: "Błąd serwera." };
-    }
+  if (body.cardNumber === validCard && body.cvv === validCvv && body.expiryDate === validExpiry) {
+    context.response.status = 200;
+    context.response.body = { success: true, message: "Płatność zaakceptowana" };
+  } else {
+    context.response.status = 400;
+    context.response.body = { success: false, message: "Błędne dane karty" };
   }
 });
 
-console.log("Server running on http://localhost:3000");
+const app = new Application();
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+console.log("Serwer uruchomiony na http://localhost:3000");
 await app.listen({ port: 3000 });
