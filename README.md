@@ -7,7 +7,7 @@ Należy dodać pozostałe operacje: mnożenie, dzielenie oraz odejmowanie 🟢
 
 Należy dodać obsługę kolejnych działań na wyniku 🟢
 
-Należy dodać procent, znak ujemny, logarytm oraz potęgę 🟡
+Należy dodać procent, znak ujemny, logarytm oraz potęgę 🔴
 
 Wersja ma się skalować na tablet 🟢 
 
