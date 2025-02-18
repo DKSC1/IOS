@@ -51,7 +51,7 @@ dodawanie produktów z poziomu aplikacji mobilnej 🔴
 
 logowanie przez aplikację serwerową 🟢
 
-rejestracja przez aplikację serwerową
+rejestracja przez aplikację serwerową 🟢
 
 logowanie via Google OAuth2 🔴
 
