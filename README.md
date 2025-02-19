@@ -12,9 +12,12 @@ Należy dodać procent, znak ujemny, logarytm oraz potęgę 🔴
 Wersja ma się skalować na tablet 🟢
 
 
-https://youtu.be/g1xuppqoTXs
+## https://youtu.be/g1xuppqoTXs
+
+<br />
 
 ![](videos/tablet.png)
+
 
 ### Zad 2 Lista zadań
 
@@ -28,7 +31,7 @@ zmiana statusu zadania (w tym modyfikacja struktury) 🟢
 
 wyświetlanie statusu na liście zadań 🟢
 
-https://youtu.be/UcDBvW8_wDM
+### https://youtu.be/UcDBvW8_wDM
 
 ### Zad 3 Lista zakupów
 
@@ -42,8 +45,8 @@ opcja dodania produktu do koszyka (tabview) 🟢
 
 dodanie więcej niż jeden produkt tego samego typu do koszyka 🟢
 
-https://youtu.be/TMZkSmRG_PU
-
+### https://youtu.be/TMZkSmRG_PU
+ 
 ### Zad 4 Sieć
 
 pobieranie produktów oraz kategorii z aplikacji serwerowej 🟢
@@ -56,7 +59,7 @@ wyświetlanie produktów oraz ich kategorii na dwóch osobnych listach 🟢
 
 dodawanie produktów z poziomu aplikacji mobilnej 🔴
 
-https://youtu.be/J9uZD546Muc
+### https://youtu.be/J9uZD546Muc
 
 ### Zad 5 Oauth
 
@@ -70,7 +73,7 @@ logowanie via Facebook lub Github OAuth2 🔴
 
 zapisywanie danych logowania OAuth2 po stronie serwera 🔴
 
-https://youtu.be/6RJ384004lE
+### https://youtu.be/6RJ384004lE
 
 ### Zad 6 Płatności
 
@@ -84,16 +87,18 @@ wdrożenie stripe'a 🔴
 
 dodanie skanowania kart 🔴
 
-https://youtu.be/_mi8wrIULGs
+### https://youtu.be/_mi8wrIULGs
 
 ### Zad 7 Testy
 
-stworzyć 30 asercji testów funkcjonalnych
+stworzyć 30 asercji testów funkcjonalnych 🟢
 
-stworzyć dodatkowo 20 asercji testów jednostkowych 
+stworzyć dodatkowo 20 asercji testów jednostkowych 🟢
 
 stworzyć mocki modelu produktów  🔴
 
 stworzyć mocki modelu kategorii 🔴
 
 dodać fixturki 🔴
+
+### https://youtu.be/u3lu9_YemoY
