@@ -21,7 +21,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Kalkulator w SwiftUI")
+            Text("Przelicznik")
                 .font(.title)
             
             TextField("Wpisz pierwszą liczbę", text: $number1)
