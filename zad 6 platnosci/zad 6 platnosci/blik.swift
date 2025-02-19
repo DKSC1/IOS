@@ -25,6 +25,7 @@ struct BlikPaymentView: View {
             .padding()
             .background(Color.green)
             .foregroundColor(.white)
+            /Volumes/macOS
             .cornerRadius(10)
 
             Text(message)

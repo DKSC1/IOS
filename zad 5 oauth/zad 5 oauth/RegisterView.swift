@@ -33,7 +33,7 @@ struct RegisterView: View {
             
             
             NavigationLink(destination: LoginView()) {
-                Text("Already have an account? Login")
+                Text("Login")
                     .foregroundColor(.blue)
             }
         }

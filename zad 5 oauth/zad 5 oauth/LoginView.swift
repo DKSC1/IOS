@@ -34,7 +34,7 @@ struct LoginView: View {
 
             
             NavigationLink(destination: RegisterView()) {
-                Text("Don't have an account? Register")
+                Text("Register")
                     .foregroundColor(.blue)
             }
         }
